@@ -1,0 +1,56 @@
+# Route name can be used in several places; e.g. links, redirects, and local
+# actions.
+entity.smile.canonical:
+  path: '/smile/{smile}'
+  defaults:
+  # Calls the view controller, defined in the annotation of the smile entity
+    _entity_view: 'smile'
+    _title: 'Smile Content'
+  requirements:
+  # Calls the access controller of the entity, $operation 'view'
+    _entity_access: 'smile.view'
+
+entity.smile.collection:
+  path: '/smile/list'
+  defaults:
+  # Calls the list controller, defined in the annotation of the smile entity.
+    _entity_list: 'smile'
+    _title: 'Smile List'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view smile entity'
+
+smile.smile_add:
+  path: '/smile/add'
+  defaults:
+  # Calls the form.add controller, defined in the smile entity.
+    _entity_form: smile.add
+    _title: 'Add Smile'
+  requirements:
+    _entity_create_access: 'smile'
+
+entity.smile.edit_form:
+  path: '/smile/{smile}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the smile entity.
+    _entity_form: smile.edit
+    _title: 'Edit Smile'
+  requirements:
+    _entity_access: 'smile.edit'
+
+entity.smile.delete_form:
+  path: '/smile/{smile}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the smile entity.
+    _entity_form: smile.delete
+    _title: 'Delete Smile'
+  requirements:
+    _entity_access: 'smile.delete'
+
+smile.smile_settings:
+  path: 'admin/structure/smile_settings'
+  defaults:
+    _form: '\Drupal\smile\Form\SmileSettingsForm'
+    _title: 'Smile Settings'
+  requirements:
+    _permission: 'administer smile entity'

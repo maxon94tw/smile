@@ -1,0 +1,12 @@
+# Define the menu links for this module
+
+entity.smile.collection:
+  title: 'Smile Listing'
+  route_name: entity.smile.collection
+  description: 'List Smile'
+  weight: 10
+smile.admin.structure.settings:
+  title: Smile Settings
+  description: 'Configure Smile entity'
+  route_name:  smile.smile_settings
+  parent: system.admin_structure

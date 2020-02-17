@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme(). for smile
+ */
+
+function smile_theme() {
+
+  return array(
+    'smile' => array(
+      'render element' => 'content',
+    ),
+  );
+}

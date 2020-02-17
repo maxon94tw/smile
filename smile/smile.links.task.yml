@@ -1,0 +1,22 @@
+# Define the 'local' links for the module
+
+smile.settings_tab:
+  route_name: smile.smile_settings
+  title: Settings
+  base_route: smile.smile_settings
+
+smile.view:
+  route_name: entity.smile.canonical
+  base_route: entity.smile.canonical
+  title: View
+
+smile.page_edit:
+  route_name: entity.smile.edit_form
+  base_route: entity.smile.canonical
+  title: Edit
+
+smile.delete_confirm:
+  route_name:  entity.smile.delete_form
+  base_route:  entity.smile.canonical
+  title: Delete
+  weight: 10

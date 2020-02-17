@@ -1,0 +1,10 @@
+# All action links for this module
+smile.smile_add:
+  # Which route will be called by the link
+  route_name: smile.smile_add
+  title: 'Add Smile'
+
+  # Where will the link appear, defined by route name.
+  appears_on:
+    - entity.smile.collection
+    - entity.smile.canonical

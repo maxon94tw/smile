@@ -1,0 +1,4 @@
+name: Smile Entity
+type: module
+description: 'Smile is new custom entity.'
+core: '8.x'

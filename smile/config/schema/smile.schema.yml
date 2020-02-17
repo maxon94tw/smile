@@ -1,0 +1,22 @@
+smile.smile_type.*:
+  type: config_entity
+  label: 'Smile config'
+  mapping:
+    id:
+      type: integer
+      label: 'ID'
+    uuid:
+      type: string
+      label: 'UUID'
+    name:
+      type: string
+      label: 'Name'
+    preferred_brand:
+      type: select
+      label: 'Brand field'
+    products_owned_count:
+      type: integer
+      label: 'Products count'
+    user_id:
+      type: entity_reference
+      label: 'User Name'
